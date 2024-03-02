@@ -94,4 +94,93 @@ foreach (string nombre in nombres)
 {
     Console.WriteLine(nombre); //imprimiria Karla, Maritza, Olga
 }
+
+
+//OPERACIONES CON CADENAS
+//Comparación de Cadenas
+// 1 - Pedir al usuario dos cadenas
+Console.WriteLine("\n1 - Pedir al usuario dos cadenas");
+Console.WriteLine("\nIngrese la primera cadena:");
+string cadena1 = Console.ReadLine()!;
+Console.WriteLine("\nIngrese la segunda cadena:");
+string cadena2 = Console.ReadLine()!;
+
+// Comparar las cadenas usando el método CompareTo
+int resultadow = cadena1.CompareTo(cadena2);
+
+//  Mostrar el resultado de la comparación
+if (resultadow == 0)
+{
+    Console.WriteLine("\nLas cadenas son iguales.");
+}
+else if (resultadow < 0)
+{
+    Console.WriteLine("\nLa primera cadena es menor que la segunda.");
+}
+else
+{
+    Console.WriteLine("\nLa primera cadena es mayor que la segunda.");
+}
+Console.WriteLine("*** Haga click a Enter");
+Console.ReadKey();
+
+
+//Contatenación de Cadenas
+// 2 - Pedir al usuario su nombre y su apellido
+Console.WriteLine("\n2 - Pedir al usuario su nombre y su apellido");
+Console.WriteLine("\nIngrese su nombre:");
+string nombrem = Console.ReadLine()!;
+Console.WriteLine("\nIngrese su apellido:");
+string apellido = Console.ReadLine()!;
+
+// Concatenar el nombre y el apellido usando el operador +
+string nombreCompleto = nombrem + " " + apellido;
+
+// Mostrar un saludo con el nombre completo
+Console.WriteLine("\nHola, " + nombreCompleto + ". Bienvenida.");
+Console.WriteLine("*** Haga click a Enter");
+Console.ReadKey();
+
+
+//Busqueda de Patrones
+// 3 - Pedir al usuario una cadena y un carácter
+Console.WriteLine("\n3 - Pedir al usuario una cadena y un carácter");
+Console.WriteLine("\nIngrese una cadena:");
+string cadenat = Console.ReadLine()!;
+Console.WriteLine("\nIngrese un carácter:");
+char caractert = Console.ReadKey().KeyChar;
+
+// Buscar el carácter en la cadena usando el método IndexOf
+int indice = cadenat.IndexOf(caractert);
+
+// Mostrar el resultado de la búsqueda
+if (indice == -1)
+{
+    Console.WriteLine("\nEl carácter no se encuentra en la cadena.");
+}
+else
+{
+    Console.WriteLine("\nEl carácter se encuentra en la posición {0} de la cadena.", indice + 1);
+}
+Console.WriteLine("*** Haga click a Enter");
+Console.ReadKey();
+
+
+//Formateo de Cadenas
+// 4 - Pedir al usuario su nombre, su edad y su país
+Console.WriteLine("\n4 - Pedir al usuario su nombre, su edad y su país");
+Console.WriteLine("\nIngrese su nombre:");
+string nombre2 = Console.ReadLine()!;
+Console.WriteLine("\nIngrese su edad:");
+int edad2 = int.Parse(Console.ReadLine()!);
+Console.WriteLine("\nIngrese su país:");
+string pais2 = Console.ReadLine()!;
+
+// Formatear el mensaje usando el método String.Format
+string mensaje2 = String.Format("\nHola, me llamo {0}, tengo {1} años y soy de {2}.", nombre2, edad2, pais2);
+
+
+Console.WriteLine(mensaje2);// Mostrar el mensaje
+Console.WriteLine("*** Haga click a Enter");
+Console.ReadKey();
 */
