@@ -50,7 +50,7 @@ Console.WriteLine(sinEspacios); //Esto imprimiria Hola Mundo
 // StartsWith():
 string aparato = "Telefono";
 bool empieza = aparato.StartsWith("Tel"); //El parámetro es la cadena a comprobar
-Console.WriteLine(empieza); //Esto imprime true, porque "Guatemala" empieza por "Tel"
+Console.WriteLine(empieza); //Esto imprime true, porque "Telefono" empieza por "Tel"
 
 //EndsWith()
 string aparato = "Telefono";
@@ -183,4 +183,52 @@ string mensaje2 = String.Format("\nHola, me llamo {0}, tengo {1} años y soy de 
 Console.WriteLine(mensaje2);// Mostrar el mensaje
 Console.WriteLine("*** Haga click a Enter");
 Console.ReadKey();
+
+
+//EJEMPLOS PRACTICOS
+
+//Ejemplo 1
+//usando el método Replace para reemplazar una subcadena
+//por otra, y la propiedad Length para obtener la
+//longitud de una cadena.
+
+
+string cadena3 = "Hola mundo";
+Console.WriteLine("\nCadena original: " + cadena3);
+
+// Reemplazar "mundo" por "amigo"
+cadena3 = cadena3.Replace("\nmundo", "amigo");
+Console.WriteLine("\nCadena modificada: " + cadena3);
+
+// Obtener la longitud de la cadena
+int longitud3 = cadena3.Length;
+Console.WriteLine("\nLongitud de la cadena: " + longitud3);
+Console.WriteLine("*** Haga click a Enter");
+Console.ReadKey();
+
+
+//Ejemplo 2
+//usando el método Split para dividir una cadena
+//de un arreglo de cadenas, y el método Join para
+//unir un arreglo de cadenas en una sola cadena.
+
+
+// Crear una cadena
+string cadena4 = "Uno,Dos,Tres,Cuatro";
+Console.WriteLine("\nCadena original: " + cadena4);
+
+// Dividir la cadena por la coma
+string[] arreglo1 = cadena4.Split(',');
+Console.WriteLine("\nArreglo de cadenas:");
+foreach (string elemento1 in arreglo1)
+{
+    Console.WriteLine(elemento1);
+}
+
+// Unir el arreglo de cadenas con un guión
+cadena4 = string.Join("-", arreglo1);
+Console.WriteLine("\nCadena unida: " + cadena4);
+Console.WriteLine("*** Haga click a Enter");
+Console.ReadKey();
 */
+
