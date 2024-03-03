@@ -230,5 +230,161 @@ cadena4 = string.Join("-", arreglo1);
 Console.WriteLine("\nCadena unida: " + cadena4);
 Console.WriteLine("*** Haga click a Enter");
 Console.ReadKey();
-*/
 
+
+
+//EJERCICIOS FINALES
+//ejercicio 1
+
+int opcion;
+do
+{
+    int numero;
+    do
+    {
+        Console.Write("Ingrese un número entero positivo: ");
+    } while (!int.TryParse(Console.ReadLine(), out numero) || numero <= 0);
+    do
+    {
+        Console.WriteLine("Menú:");
+        Console.WriteLine("\n1. Calcular el factorial del número.");
+        Console.WriteLine("2. Calcular la raíz cuadrada del número.");
+        Console.WriteLine("3. Salir del programa.");
+        Console.Write("\nSeleccione una opción: ");
+    } while (!int.TryParse(Console.ReadLine(), out opcion) || opcion < 1 || opcion > 3);
+    switch (opcion)
+    {
+        case 1:
+            // Calculando el factorial del número
+            long factorial = 1;
+            for (int i = 1; i <= numero; i++)
+            {
+                factorial *= i;
+            }
+            Console.WriteLine($"\nEl factorial de {numero} es: {factorial}");
+            break;
+        case 2:
+            // Calculando la raíz cuadrada del número
+            double raizCuadrada = Math.Sqrt(numero);
+            Console.WriteLine($"\nLa raíz cuadrada de {numero} es: {raizCuadrada}");
+            break;
+        case 3:
+            // Saiendo del programa
+            Console.WriteLine("\nHa elegido la opcion salir del programa");
+            break;
+        default:
+            Console.WriteLine("\nHa ocurrido un error, seleccione una opción del menú");
+            break;
+    }
+} while (opcion != 3);
+
+
+
+//Ejercicio 2
+
+do
+{
+    Console.Write("Ingrese el primer número: ");
+    if (!int.TryParse(Console.ReadLine(), out int numero1))
+    {
+        Console.WriteLine("Error, solo numeros enteros.");
+        continue;
+    }
+    Console.Write("Ingrese el segundo número: ");
+    if (!int.TryParse(Console.ReadLine(), out int numero2))
+    {
+        Console.WriteLine("Error: solo numeros enteros.");
+        continue;
+    }
+    Console.Write("Ingrese el operador (+, -, *, /) \no escriba salir para salir del programa: ");
+    string entrada = Console.ReadLine()!;
+    if (entrada.ToLower() == "salir")
+    {
+        Console.WriteLine("Ha elegido la opción salir del programa");
+        break;
+    }
+    string operador = entrada;
+    double resultado = 0;
+    switch (operador)
+    {
+        case "+":
+            resultado = numero1 + numero2;
+            break;
+        case "-":
+            resultado = numero1 - numero2;
+            break;
+        case "*":
+            resultado = numero1 * numero2;
+            break;
+        case "/":
+            if (numero2 != 0)
+            {
+                resultado = (double)numero1 / numero2;
+            }
+            else
+            {
+                Console.WriteLine("Error: no se puede dividir entre cero.");
+                continue;
+            }
+            break;
+        default:
+            Console.WriteLine("Error: Operador no válido.");
+            continue;
+    }
+    Console.WriteLine($"El resultado de la operación es: {resultado}");
+} while (true);
+
+
+
+
+//Ejercicio 3
+
+do
+{
+    Console.Write("\nIngrese un número para operar la multiplicación\n" +
+        "o escriba la palabra salir para salir del programa: \n");
+    string entrada = Console.ReadLine()!;
+
+    if (entrada.ToLower() == "salir")
+    {
+        Console.WriteLine("\nHa escrito la opción salir");
+        break;
+    }
+    if (!int.TryParse(entrada, out int numero))
+    {
+        Console.WriteLine("\nError: Debe ingresar un número entero.");
+        continue;
+    }
+    Console.WriteLine($"\nTabla de multiplicar del {numero}:");
+    for (int i = 1; i <= 10; i++)
+    {
+        Console.WriteLine($"{numero} x {i} = {numero * i}");
+    }
+} while (true);
+
+
+
+//Ejercicio 3
+
+do
+{
+    Console.Write("\nIngrese un número para operar la multiplicación\n" +
+        "o escriba la palabra salir para salir del programa: \n");
+    string entrada = Console.ReadLine()!;
+
+    if (entrada.ToLower() == "salir")
+    {
+        Console.WriteLine("\nHa escrito la opción salir");
+        break;
+    }
+    if (!int.TryParse(entrada, out int numero))
+    {
+        Console.WriteLine("\nError: Debe ingresar un número entero.");
+        continue;
+    }
+    Console.WriteLine($"\nTabla de multiplicar del {numero}:");
+    for (int i = 1; i <= 10; i++)
+    {
+        Console.WriteLine($"{numero} x {i} = {numero * i}");
+    }
+} while (true);
